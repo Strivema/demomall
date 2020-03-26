@@ -1,0 +1,27 @@
+version: '3'
+services:
+  cloud-forecast:
+    container_name: demomall
+    hostname: demomall
+    image: demomall
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+    - 9090:9090
+    extra_hosts:
+    - "cloud-eureka:10.10.90.73"
+    networks:
+    - hope-cloud
+    environment:
+      TZ: 'Asia/Shanghai'
+      SPRING_PROFILES_ACTIVE: dev
+    logging:
+      driver: json-file
+      options:
+        max-file: '3'
+        max-size: 100m
+networks:
+  hope-cloud:
+    external: true
