@@ -1,4 +1,4 @@
-FROM anapsix/alpine-java:8_server-jre_unlimited
+FROM openjdk:8-jdk-alpine
 
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
