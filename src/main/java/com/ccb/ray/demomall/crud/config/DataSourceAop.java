@@ -23,7 +23,7 @@ public class DataSourceAop {
 
     }
 
-    @Pointcut("@annotation(com.ccb.ray.demomall.crud.annotation.Slave)" +
+    @Pointcut("!@annotation(com.ccb.ray.demomall.crud.annotation.Master)" +
             "&& execution(* com.ccb.ray.demomall.crud.service..*select*(..))" +
             "||execution(* com.ccb.ray.demomall.crud.service..*get*(..))")
     public void readPointCut() {
