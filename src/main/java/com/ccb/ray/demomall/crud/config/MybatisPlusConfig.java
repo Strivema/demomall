@@ -25,7 +25,7 @@ import javax.sql.DataSource;
 @MapperScan("com.ccb.ray.demomall.crud.mapper")
 public class MybatisPlusConfig {
 
-    @Resource(name = "myRoutingDataSource")
+    @Autowired
     private DataSource myRoutingDataSource;
 
     public PaginationInterceptor paginationInterceptor() {

@@ -33,9 +33,6 @@ spring:
       password: 1233456
   application:
     name: prometheus-test #应用名称
-
-logging:
-  level: debug
 server:
   port: 8080
 
